@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /* scrollbar modifications */
 
 /* width */
@@ -28,9 +27,20 @@ html {
   background: #3cba5399;
 }
 
-
-
 /* project section feature */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  height: 12%;
+  width: 100%;
+  background-color: #021227;
+  z-index: 1000;
+  padding-top: 25px;
+}
+
+
+
+
 
 .featured-project-img-01 {
   background-image: linear-gradient(
@@ -40,20 +50,8 @@ html {
   );
 
   transition: background-image 0.5s;
-
   position: relative;
-
   color: #ffffff78;
-}
-
-.sticky-nav {
-  position: fixed;
-  top: 0;
-  height: 12%;
-  width: 100%;
-  background-color: #021227;
-  z-index: 1000;
-  padding-top: 25px;
 }
 
 .featured-project-img-01::before {
@@ -74,24 +72,19 @@ html {
 
   transition: width 1s ease-in-out;
 }
-
 .featured-project-img-01:hover:before {
   width: 0%;
 }
-
-
 
 /* hiding img scrollbars */
 
 .featured-project-img-01-div::-webkit-scrollbar {
   display: none;
 }
-
 .featured-project-img-01-div {
   -ms-overflow-style: none; /* E.g Internet Explorer, Edge... */
   scrollbar-width: none; /* E.g Firefox */
 }
-
 
 
 /* project mentions */
@@ -102,7 +95,6 @@ html {
 .mentions-project:hover .mentions-project-div {
   display: block;
 }
-
 .mentions-project {
   background-image: linear-gradient(
     to bottom,
@@ -111,7 +103,6 @@ html {
   );
 
   transition: background-image 0.5s;
-
   position: relative;
 }
 
@@ -133,7 +124,6 @@ html {
 
   transition: width 1s ease-in-out;
 }
-
 .mentions-project:hover:after {
   width: 0%;
 }

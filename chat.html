@@ -1,0 +1,136 @@
+how to replicate the CSS animation of "featured-project-img-01, featured-project-img-01::before,
+ featured-project-img-01:hover:before, featured-project-img-01-div::-webkit-scrollbar and 
+ featured-project-img-01-div" in this code to only html and Tailwind inline CSS, thank you
+
+"<!DOCTYPE html>
+<html lang="en" class="text-[14px] sm:text-[16px]  scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./images/seo.png" type="image/x-icon">
+
+  <!-- ion icons link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Tailwind CSS CDN Link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .featured-project-img-01 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(25, 254, 67, 0),
+    rgba(25, 254, 67, 0)
+  );
+
+  transition: background-image 0.5s;
+  position: relative;
+  color: #ffffff78;
+}
+
+.featured-project-img-01::before {
+  content: "";
+  width: 100%;
+  display: block;
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(2, 22, 49, 0.5),
+    rgba(2, 22, 48, 0.5)
+  );
+
+  transition: width 1s ease-in-out;
+}
+.featured-project-img-01:hover:before {
+  width: 0%;
+}
+
+/* hiding img scrollbars */
+
+.featured-project-img-01-div::-webkit-scrollbar {
+  display: none;
+}
+.featured-project-img-01-div {
+  -ms-overflow-style: none; /* E.g Internet Explorer, Edge... */
+  scrollbar-width: none; /* E.g Firefox */
+}
+
+  </style>
+  
+  <title>Victoria Iria</title>
+</head>
+
+<body style="font-family: Roboto, sans-serif;" class="bg-[#021227] text-[#cccccc]">
+
+
+<!-- |----\_______________________/----| -->
+           <!-- Header Section -->
+<!-- |----/-----------------------\----| -->
+
+  <header class="bg-[#021227] max-w-screen-xl	mx-auto  py-6">
+    <nav class="fixed top-0 h-12 z-50 bg-[#021227] sm:py-9 w-full">
+      <ul style="font-family: 'Roboto Mono', monospace;" class="flex justify-around font-semibold">
+        <li class=""><a href="#about" class="transition-all hover:text-[#247032]">About</a></li>
+        <li class=""><a href="#skills" class="transition-all hover:text-[#247032]">Skills</a></li>
+        <li class=""><a href="#projects" class="transition-all hover:text-[#247032]">Projects</a></li>
+        <li class=""><a href="#testimonials" class="transition-all hover:text-[#247032]">Testimonials</a></li>
+        <li class=""><a href="#contact" class="transition-all hover:text-[#247032]">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <!-- |----\_________________________/----| -->
+       <!-- Projects Section -->
+<!-- |----/-------------------------\----| -->
+
+<section class="bg-[#021227] px-7 sm:px-14 py-16 max-w-screen-xl mx-auto" id="projects">
+    <div class="flex items-center justify-center gap-12 pb-12 mt-8">
+      <div class="h-px flex-1 bg-[#309543] hidden sm:block"></div>
+      <h2 class="text-3xl font-bold text-center">Some Notable Works</h2>
+      <div class="h-px flex-1 bg-[#309543] hidden sm:block"></div>
+    </div>
+    
+    <div>
+    
+      <!-- project 01 -->
+      <div class="flex flex-col sm:flex-row sm:gap-12 mt-20">
+    
+        <!-- left side -->
+        <div class="mockup-window border border-base-300 sm:w-1/2 h-[300px] order-2	sm:order-none">
+          <div class="featured-project-img-01-div cursor-all-scroll overflow-scroll h-[300px] rounded">
+            <div class="featured-project-img-01  transition-all	duration-500  ">
+              <img src="./images/Screenshot (485).png" alt="Job @ Ease" class="">
+            </div>
+          </div>
+        </div>
+    
+        <!-- right side -->
+        <div class="sm:w-1/2 h-[300px] flex flex-col justify-center order-1 sm:order-none">
+          <h2 class="sm:text-end text-3xl font-bold mb-8 sm:relative sm:right-[10%] lg:right-1/4">01. Job @ Ease
+          </h2>
+          <p
+            class="bg-[#051830] pl-8 pr-2 py-4 mb-2 rounded shadow-sm sm:relative sm:right-[10%] lg:right-1/4 text-[#ffffff78]">
+            Job@Ease is job searching platform thas connects the qualified professionals seeking for their dream jobs to 
+            employers looking to hire the best talent to help grow their businesses. <br>
+            <span class="text-[#309543] font-medium">This Site is Fully Responsive</span>
+          </p>
+
+        </div>
+    
+      </div>
+  
+    </div>
+  </section>
+
+</body>
+</html>
+"
